@@ -36,15 +36,15 @@ git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/l
 
 ##########
 # Modify the version number
-sed -i "s/OpenWrt /Leopard build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /Fndsz build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
-    echo 'CONFIG_KERNEL_BUILD_USER="Leopard"' >>.config ||
-    sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"Leopard"@' .config
+    echo 'CONFIG_KERNEL_BUILD_USER="Fndsz"' >>.config ||
+    sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"Fndsz"@' .config
 
 # Add kernel build domain
 [ -z $(grep "CONFIG_KERNEL_BUILD_DOMAIN=" .config) ] &&
