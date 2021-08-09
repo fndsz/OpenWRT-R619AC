@@ -11,10 +11,10 @@
 #=================================================
 # Modify default IP
 # sed -i 's/15744/32448/g'
-sed -i 's/192.168.1.1/192.168.5.200/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.7.1/g' package/base-files/files/bin/config_generate
 
 # Modify hostname
-sed -i 's/OpenWrt/R619ac/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt_/G-DOCK/g' package/base-files/files/bin/config_generate
 
 
 
